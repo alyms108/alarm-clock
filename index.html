@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!--SCRIPTS-->
-	<script type="text/javascript" src="JS/angular.min.js"></script>
-	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script> use cdn for deployment -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="JS/script.js"></script>
+<html lang="en-us" ng-app="alarmClock">
+	<head>
+		<!--SCRIPTS-->
+		<script type="text/javascript" src="JS/angular.min.js"></script>
+		<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script> use cdn for deployment -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="JS/script.js"></script>
 
-	<!--STYLESHEETS-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	<title>My Alarm Clock</title>
-</head>
-<body>
-	<div class="container countdown">
-		<h1>X minutes until "time"</h1>
-		<div class="progress">
-  		<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    		<span class="sr-only">20% Complete</span>
-  		</div>
-		</div>
-		<button type="button" class="btn btn-danger">Cancel Alarm</button>
-		<button type="button" class="btn btn-default">Snooze</button>
-		<button type="button" class="btn btn-default">Change Time</button>
-	</div>	
-	<!--<div class="container">
-		<button type="button" class="btn btn-danger">Cancel Alarm</button>
-		<button type="button" class="btn btn-default">Snooze</button>
-		<button type="button" class="btn btn-default">Change Time</button>
-	</div>-->
-</body>
+		<!--STYLESHEETS-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+		<title>My Alarm Clock</title>
+	</head>
+	<body>
+		<div class="container countdown" ng-controller="AlarmController as ac">
+			<h1>{{ X }} minutes until {{ time }}</h1>
+			<div class="progress">
+	  		<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+	    		<span class="sr-only">20% Complete</span>
+	  		</div>
+			</div>
+			<button type="button" class="btn btn-danger">Cancel Alarm</button>
+			<button type="button" class="btn btn-default">Snooze</button>
+			<button type="button" class="btn btn-default">Change Time</button>
+		</div>	
+		<!--<div class="container">
+			<button type="button" class="btn btn-danger">Cancel Alarm</button>
+			<button type="button" class="btn btn-default">Snooze</button>
+			<button type="button" class="btn btn-default">Change Time</button>
+		</div>-->
+	</body>
 </html>
